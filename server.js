@@ -12,13 +12,13 @@ var articles= {
         heading: '1st Heading',
         paragraph: '<p>Content of 1st Article Heading</p>'
     },
-    'ArticleTwo' :{
+    'ArticleTwo' : {
         title: 'Article_One',
         date: 'Sept 10, 2018',
         heading: '2nd Heading',
         paragraph: '<p>Content of 2nd Article Heading</p>'
     },
-    'ArticleThree' :{
+    'ArticleThree' : {
         title: 'Article_One',
         date: 'Sept 15, 2018',
         heading: '3rd Heading',
