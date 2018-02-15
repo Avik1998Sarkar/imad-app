@@ -8,7 +8,7 @@ app.use(morgan('combined'));
 var ArticleOne={
     title: 'Article_One',
     date: 'Sept 5, 2018',
-    heading: '1st Heading',
+    heading: '<h1>1st Heading</h1>',
     paragraph: '<p>Content of Heading</p>'
 };
 
