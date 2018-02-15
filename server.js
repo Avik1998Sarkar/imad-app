@@ -65,21 +65,12 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articleName',function(req, res){
+app.get('/:ArticleName',function(req, res){
     var articleName = req.param.articleName;
-    res.send(createTemplete(articles[articleName]));
+    res.send(createTemplete(articles[ArticleName]));
 });
 
-app.get('/article_one',function(req, res){
-  res.send(createTemplete(ArticleOne));
-});
 
-app.get('/article_two',function(req, res){
-  res.send(createTemplete(ArticleTwo));
-});
-app.get('/article_three',function(req, res){
-  res.send(createTemplete(ArticleThree));
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
