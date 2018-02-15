@@ -8,7 +8,7 @@ app.use(morgan('combined'));
 var ArticleOne={
     title: 'Article_One',
     date: 'Sept 5, 2018',
-    heading: '<h1>1st Heading</h1>',
+    heading: '1st Heading',
     paragraph: '<p>Content of Heading</p>'
 };
 
@@ -33,7 +33,7 @@ function createTemplete(data){
                 </div>
                 
                 <div>
-                    ${heading}
+                    <h1>${heading}</h1>
                 </div>
                 
                 <div>
