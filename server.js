@@ -5,70 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articles= {
-    'ArticleOne' : {
-        title: 'Article_One',
-        date: 'Sept 5, 2018',
-        heading: '1st Heading',
-        paragraph: '<p>Content of 1st Article Heading</p>'
-    },
-    'ArticleTwo' : {
-        title: 'Article_One',
-        date: 'Sept 10, 2018',
-        heading: '2nd Heading',
-        paragraph: '<p>Content of 2nd Article Heading</p>'
-    },
-    'ArticleThree' : {
-        title: 'Article_One',
-        date: 'Sept 15, 2018',
-        heading: '3rd Heading',
-        paragraph: '<p>Content of 3rd Article Heading</p>'
-    }
-};
-function createTemplete(data){
-    
-    var title = data.title;
-    var date = data.date;
-    var heading = data.heading;
-    var paragraph = data.paragraph;
-    
-        var htmlContent = `
-        <html>
-        <head>
-        <title>
-            ${title}
-        </title>
-        <link rel="stylesheet" href="ui/style.css">
-        </head>
-        <body>
-            <div class="container">
-                <div>
-                    ${date}
-                </div>
-                
-                <div>
-                    <h1>${heading}</h1>
-                </div>
-                
-                <div>
-                    ${paragraph}
-                </div>
-                
-            </div>
-        </body>
-        </html>
-        `;
-        return htmlContent;
-}
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
-
-app.get('/:ArticleName',function(req, res){
-    var articleName = req.params.articleName;
-    res.send(createTemplete(articles[ArticleName]));
-});
 var counter = 0;
 app.get('/counter',function(req,res){
     counter = counter + 1;
